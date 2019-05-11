@@ -1,0 +1,21 @@
+server:
+  #contextPath: /api/dev
+  port: 8080
+  error:
+    include-stacktrace: NEVER
+
+dataload:
+  enabled: false;
+
+spring:
+  profile: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: appStore
+      repositories:
+        enabled: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
